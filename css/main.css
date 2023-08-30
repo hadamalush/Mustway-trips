@@ -52,7 +52,7 @@
   font-weight: 300;
   text-transform: uppercase;
   text-align: center;
-  color: #6e5763;
+  color: rgb(48, 161, 226);
   letter-spacing: 2px;
 }
 
@@ -92,6 +92,7 @@ html {
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 1.6rem;
+  background-color: white;
 }
 
 .burger-btn {
@@ -122,7 +123,7 @@ body {
   right: 0;
   height: 3px;
   content: "";
-  background-color: #efe1d1;
+  background-color: rgb(48, 161, 226);
   transition: width 0.3s;
 }
 .burger-btn__bars {
@@ -149,7 +150,7 @@ body {
   height: 100vh;
   width: 100%;
   transform: translate(100%);
-  background-image: linear-gradient(90deg, #58324c, #375f43);
+  background-image: linear-gradient(-180deg, #15304e, #333255);
   z-index: 100;
   transition: transform 0.5s;
 }
@@ -215,8 +216,8 @@ body {
   text-align: center;
   height: 75vh;
   padding: 2em;
-  color: #efe1d1;
-  background-image: linear-gradient(90deg, rgba(51, 29, 44, 0.6980392157), rgba(29, 51, 36, 0.8980392157)), url("../img/ufo-small.jpg");
+  color: rgb(48, 161, 226);
+  background-image: linear-gradient(-180deg, rgba(21, 48, 78, 0.6117647059), rgba(51, 50, 85, 0.7607843137)), url("../img/kitchen-small.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -224,6 +225,7 @@ body {
 }
 .header__title {
   font-size: 4.6rem;
+  text-shadow: 0 0 2px black;
   font-family: "Rubik Mono One", sans-serif;
 }
 .header__text {
@@ -233,18 +235,180 @@ body {
 .header__btn {
   margin-top: 2em;
   padding: 0.8em 1.6em;
-  background-color: #a78295;
+  background-color: rgb(48, 161, 226);
   border: none;
   border-radius: 15px;
   text-transform: uppercase;
   text-decoration: none;
-  color: #000;
+  color: #171274;
   font-weight: bold;
 }
 .header__btn::before {
-  background-color: #6e5763;
+  background-color: rgb(59, 183, 255);
 }
 
+.dreams__box {
+  display: flex;
+  flex-direction: column;
+  margin: 2em 0;
+  color: #171274;
+}
+.dreams__img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.dreams__title {
+  font-weight: bold;
+  font-size: 2.6rem;
+  margin-bottom: 0.5em;
+}
+.dreams__text {
+  font-size: 1.4rem;
+}
+
+.hero-img {
+  position: relative;
+  padding: 10em 2em;
+  text-align: center;
+  color: rgb(48, 161, 226);
+  overflow: hidden;
+  background-image: linear-gradient(-180deg, rgba(21, 48, 78, 0.6117647059), rgba(51, 50, 85, 0.7607843137)), url("../img/sidekix-small.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.hero-img__title {
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: "Rubik Mono One", sans-serif;
+  text-shadow: 0 0 2px #000;
+}
+.hero-img__text {
+  padding: 1em 0;
+}
+
+.towers__cards {
+  display: flex;
+  justify-content: center;
+}
+.towers__card {
+  position: relative;
+  height: 400px;
+  width: 500px;
+  margin: 0 2em;
+  text-align: center;
+  perspective: 1000px;
+}
+.towers__card-img {
+  background-size: cover;
+  background-position: 0;
+  height: 100%;
+  width: 100%;
+  transition: transform 1s;
+  border-radius: 15px;
+}
+.towers__card-img-title {
+  padding: 2em 0;
+  font-size: 2.4rem;
+  font-family: "Rubik Mono One", sans-serif;
+  color: #171274;
+}
+.towers__card-img-info {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  color: rgb(48, 161, 226);
+}
+.towers__card-img--first {
+  background-image: linear-gradient(-180deg, #4ca0ff, rgba(132, 129, 219, 0)), url("../img/tower1.jpg");
+}
+.towers__card-img--second {
+  background-image: linear-gradient(-180deg, #4ca0ff, rgba(132, 129, 219, 0)), url("../img/tower2.jpg");
+}
+.towers__card-img--third {
+  background-image: linear-gradient(-180deg, #4ca0ff, rgba(132, 129, 219, 0)), url("../img/tower3.jpg");
+}
+.towers__card-info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 15px;
+  transition: transform 1s;
+  background-image: linear-gradient(-180deg, #15304e, #333255);
+  opacity: 0;
+}
+.towers__card-info-title {
+  padding: 3em;
+  font-family: "Rubik Mono One", sans-serif;
+  color: rgb(48, 161, 226);
+}
+.towers__card-info-list {
+  width: 70%;
+  margin: 0 auto;
+  list-style-type: none;
+}
+.towers__card-info-list-item {
+  color: white;
+  padding: 4px 0;
+  border-bottom: 1px solid white;
+}
+.towers__card-info-btn {
+  position: absolute;
+  bottom: 30px;
+  transform: translateX(-50%);
+  padding: 0.8em 2em;
+  background-color: rgb(48, 161, 226);
+  border: none;
+  border-radius: 15px;
+  color: #171274;
+}
+.towers__card-info-btn::before {
+  background-color: rgb(59, 183, 255);
+}
+.towers__card:hover .towers__card-img {
+  transform: rotateY(-180deg);
+  opacity: 1;
+}
+.towers__card:hover .towers__card-info {
+  transform: rotateY(180deg);
+  opacity: 1;
+}
+.towers__card:hover .towers__card-info-title,
+.towers__card:hover .towers__card-info-list {
+  transform: rotateY(-180deg);
+}
+.towers__card:hover .towers__card-info-btn {
+  transform: rotateY(-180deg) translateX(50%);
+}
+
+@media (min-width: 576px) {
+  .dreams__box {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .dreams__box-text {
+    width: 55%;
+  }
+  .dreams__box-text--right {
+    text-align: right;
+    width: 55%;
+  }
+  .dreams__box-img {
+    width: 40%;
+  }
+  .dreams__box-img--right {
+    order: 1;
+  }
+  .dreams__img {
+    margin-bottom: 0;
+    max-height: 300px;
+  }
+}
 @media (min-width: 768px) {
   .white-block {
     width: 50%;
@@ -256,6 +420,26 @@ body {
     font-size: 2.2rem;
     font-weight: bold;
   }
+  .dreams__text {
+    font-size: 1.8rem;
+  }
+  .hero-img {
+    padding: 30rem 2em;
+    background-image: linear-gradient(-180deg, rgba(21, 48, 78, 0.6117647059), rgba(51, 50, 85, 0.7607843137)), url("../img/sidekix-big.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  .hero-img hr {
+    margin: 0 auto;
+    width: 70%;
+  }
+  .hero-img__title {
+    font-size: 6rem;
+  }
+  .hero-img__text {
+    font-size: 4rem;
+  }
 }
 @media (min-width: 992px) {
   .burger-btn {
@@ -263,10 +447,29 @@ body {
     right: 40px;
   }
   .header {
-    background-image: linear-gradient(90deg, rgba(51, 29, 44, 0.6980392157), rgba(29, 51, 36, 0.8980392157)), url("../img/ufo-big.jpg");
+    background-image: linear-gradient(-180deg, rgba(21, 48, 78, 0.6117647059), rgba(51, 50, 85, 0.7607843137)), url("../img/kitchen-big.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-attachment: scroll;
+  }
+  .nav__item {
+    font-size: 4.8rem;
+  }
+  .dreams__box {
+    margin: 5em 0;
+  }
+  .dreams__box-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .dreams__box-text--right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .dreams__title {
+    font-size: 3.6rem;
   }
 }/*# sourceMappingURL=main.css.map */

@@ -10,7 +10,8 @@
 	position: absolute;
 	height: 40px;
 	width: 60%;
-	background-color: white;
+
+	background-color: $main-background-color;
 
 	&-left {
 		bottom: 0;
@@ -58,7 +59,7 @@
 	font-weight: 300;
 	text-transform: uppercase;
 	text-align: center;
-	color: $tertiary-color;
+	color: $main-color;
 	letter-spacing: 2px;
 }
 

@@ -1,20 +1,25 @@
-$main-color: #efe1d1;
-$secondary-color: #a78295;
-$tertiary-color: #6e5763;
+$main-color: rgb(48, 161, 226);
+$secondary-color: #171274;
+$tertiary-color: rgb(59, 183, 255);
 $pure-white: #efe1d1;
-$dark: #000;
+$dark: #070707;
 $green-color: #4e9f3d;
 $green-color-hover: #63c94f;
+
+
+
+$main-background-color: white;
+
 //https://colorhunt.co/palette/191a191e51284e9f3dd8e9a8
 
-$light-gradient: linear-gradient(90deg, (#58324cb2), #375f43e5);
-$main-gradient: linear-gradient(90deg, (#331d2cb2), #1d3324e5);
+$light-gradient: linear-gradient(-180deg, (#4ca0ff), #8481db00);
+$main-gradient: linear-gradient(-180deg, (#15304e9c), #333255c2);
 $purple-gradient: linear-gradient(
 	45deg,
 	rgba(190, 10, 214, 0.75),
 	rgba(68, 0, 255, 0.75)
 );
-$navi-gradient-solid: linear-gradient(90deg, (#58324c), #375f43);
+$navi-gradient-solid: linear-gradient(-180deg, (#15304e), #333255);
 $light-blue-gradient-solid: radial-gradient(
 	circle at top right,
 	rgb(0, 78, 255) 0%,

@@ -18,6 +18,7 @@ html {
 body {
 	font-family: "Open Sans", sans-serif;
 	font-size: 1.6rem;
+	background-color: $main-background-color;
 }
 
 //NAV
@@ -159,11 +160,12 @@ body {
 	height: 75vh;
 	padding: 2em;
 	color: $main-color;
-	@include heroImages("../img/ufo-small.jpg");
+	@include heroImages("../img/kitchen-small.jpg");
 	background-attachment: scroll;
 
 	&__title {
 		font-size: 4.6rem;
+		text-shadow: 0 0 2px black;
 		font-family: "Rubik Mono One", sans-serif;
 	}
 
@@ -175,16 +177,217 @@ body {
 	&__btn {
 		margin-top: 2em;
 		padding: 0.8em 1.6em;
-		background-color: $secondary-color;
+		background-color: $main-color;
 		border: none;
 		border-radius: 15px;
 		text-transform: uppercase;
 		text-decoration: none;
-		color: $dark;
+		color: $secondary-color;
 		font-weight: bold;
 
 		&::before {
 			background-color: $tertiary-color;
+		}
+	}
+}
+
+//MAIN
+//DREAMS SECTION
+
+.dreams {
+	&__box {
+		display: flex;
+		flex-direction: column;
+		margin: 2em 0;
+		color: $secondary-color;
+	}
+
+	&__img {
+		width: 100%;
+
+		object-fit: cover;
+	}
+
+	&__title {
+		font-weight: bold;
+		font-size: 2.6rem;
+		margin-bottom: 0.5em;
+	}
+
+	&__text {
+		font-size: 1.4rem;
+	}
+}
+
+//HERO-IMG
+
+.hero-img {
+	position: relative;
+	padding: 10em 2em;
+	text-align: center;
+	color: $main-color;
+	overflow: hidden;
+
+	@include heroImages("../img/sidekix-small.jpg");
+
+	&__title {
+		font-size: 3rem;
+		font-weight: bold;
+		font-family: "Rubik Mono One", sans-serif;
+		text-shadow: 0 0 2px #000;
+	}
+
+	&__text {
+		padding: 1em 0;
+	}
+}
+
+//TOWERS-CARD
+
+.towers {
+	&__cards {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__card {
+		position: relative;
+		height: 400px;
+		width: 500px;
+		margin: 0 2em;
+		text-align: center;
+
+		perspective: 1000px;
+
+		&-img {
+			background-size: cover;
+			background-position: 0;
+			height: 100%;
+			width: 100%;
+			transition: transform 1s;
+			border-radius: 15px;
+
+			&-title {
+				padding: 2em 0;
+				font-size: 2.4rem;
+				font-family: "Rubik Mono One", sans-serif;
+				color: $secondary-color;
+			}
+
+			&-info {
+				position: absolute;
+				bottom: 30px;
+				left: 50%;
+				transform: translateX(-50%);
+				font-weight: bold;
+				color: $main-color;
+			}
+
+			&--first {
+				background-image: $light-gradient, url("../img/tower1.jpg");
+			}
+			&--second {
+				background-image: $light-gradient, url("../img/tower2.jpg");
+			}
+			&--third {
+				background-image: $light-gradient, url("../img/tower3.jpg");
+			}
+		}
+
+		&-info {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			border-radius: 15px;
+			transition: transform 1s;
+			background-image: $navi-gradient-solid;
+
+			opacity: 0;
+
+			&-title {
+				padding: 3em;
+				font-family: "Rubik Mono One", sans-serif;
+				color: $main-color;
+			}
+
+			&-list {
+				width: 70%;
+				margin: 0 auto;
+				list-style-type: none;
+
+				&-item {
+					color: white;
+					padding: 4px 0;
+					border-bottom: 1px solid white;
+				}
+			}
+
+			&-btn {
+				position: absolute;
+				bottom: 30px;
+				transform: translateX(-50%);
+				padding: 0.8em 2em;
+				background-color: $main-color;
+				border: none;
+				border-radius: 15px;
+				color: $secondary-color;
+
+				&::before {
+					background-color: $tertiary-color;
+				}
+			}
+		}
+
+		&:hover {
+			.towers__card-img {
+				transform: rotateY(-180deg);
+				opacity: 1;
+			}
+
+			.towers__card-info {
+				transform: rotateY(180deg);
+				opacity: 1;
+			}
+			.towers__card-info-title,
+			.towers__card-info-list {
+				transform: rotateY(-180deg);
+			}
+			.towers__card-info-btn {
+				transform: rotateY(-180deg) translateX(50%);
+			}
+		}
+	}
+}
+
+@media (min-width: 576px) {
+	.dreams {
+		&__box {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		&__box-text {
+			width: 55%;
+
+			&--right {
+				text-align: right;
+				width: 55%;
+			}
+		}
+
+		&__box-img {
+			width: 40%;
+
+			&--right {
+				order: 1;
+			}
+		}
+
+		&__img {
+			margin-bottom: 0;
+			max-height: 300px;
 		}
 	}
 }
@@ -204,6 +407,30 @@ body {
 			font-weight: bold;
 		}
 	}
+
+	.dreams {
+		&__text {
+			font-size: 1.8rem;
+		}
+	}
+
+	.hero-img {
+		padding: 30rem 2em;
+		@include heroImages("../img/sidekix-big.jpg");
+
+		hr {
+			margin: 0 auto;
+			width: 70%;
+		}
+
+		&__title {
+			font-size: 6rem;
+		}
+
+		&__text {
+			font-size: 4rem;
+		}
+	}
 }
 
 @media (min-width: 992px) {
@@ -212,7 +439,35 @@ body {
 		right: 40px;
 	}
 	.header {
-		@include heroImages("../img/ufo-big.jpg");
+		@include heroImages("../img/kitchen-big.jpg");
 		background-attachment: scroll;
+	}
+
+	.nav {
+		&__item {
+			font-size: 4.8rem;
+		}
+	}
+
+	.dreams {
+		&__box {
+			margin: 5em 0;
+		}
+
+		&__box-text {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+
+			&--right {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+			}
+		}
+
+		&__title {
+			font-size: 3.6rem;
+		}
 	}
 }
