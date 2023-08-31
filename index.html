@@ -7,9 +7,11 @@
     <title>Mustway Trips</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&family=Rubik+Mono+One&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/cba55816d0.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -22,7 +24,7 @@
     </button>
 
     <nav class="nav" id="navMenu">
-        <a href="#planets" class="nav__item">Planety</a>
+        <a href="#houses" class="nav__item">Houses</a>
         <a href="#offers" class="nav__item">Oferty</a>
         <a href="#reviews" class="nav__item">Opinie</a>
         <a href="#contact" class="nav__item">Kontakt</a>
@@ -36,7 +38,7 @@
     </header>
 
     <main class="main">
-        <section class="dreams section-padding section white-section">
+        <section class="dreams section-padding section white-section" id="houses">
 
             <div class="wrapper">
                 <h2 class="section-heading">Spełniaj marzenia</h2>
@@ -155,6 +157,113 @@
             </div>
         </section>
 
+        <section class="offers section-padding section" id="offers">
+
+            <div class="white-block white-block-right"></div>
+            <div class="white-block white-block-left"></div>
+
+
+            <h2 class="section-heading">Oferty</h2>
+
+            <div class="wrapper">
+
+                <div class="offers__box">
+
+                    <div class="offers__option">
+                        <img src="./img/option1.jpg" alt="Sydney" class="offers__option-img">
+                        <div class="offers__option-info">
+                            <h3 class="offers__option-heading">Wyjazd z dziećmi</h3>
+                            <p class="offers__option-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+                                necessitatibus quos autem harum nam. Ipsum odit perferendis maxime obcaecati quod!</p>
+                            <p class="offers__option-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="offers__option-btn btn-special-animation">Wybierz</button>
+                        </div>
+                    </div>
+
+                    <div class="offers__option">
+                        <img src="./img/option2.jpg" alt="Sydney" class="offers__option-img offers__option-img--right">
+                        <div class="offers__option-info">
+                            <h3 class="offers__option-heading">Wypad z ziomkami</h3>
+                            <p class="offers__option-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+                                necessitatibus quos autem harum nam. Ipsum odit perferendis maxime obcaecati quod!</p>
+                            <p class="offers__option-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="offers__option-btn btn-special-animation">Wybierz</button>
+                        </div>
+                    </div>
+
+                    <div class="offers__option">
+                        <img src="./img/option3.jpg" alt="Sydney" class="offers__option-img">
+                        <div class="offers__option-info">
+                            <h3 class="offers__option-heading">Tylko we dwoje</h3>
+                            <p class="offers__option-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+                                necessitatibus quos autem harum nam. Ipsum odit perferendis maxime obcaecati quod!</p>
+                            <p class="offers__option-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="offers__option-btn btn-special-animation">Wybierz</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="reviews section-padding section white-section" id="reviews">
+            <h2 class="section-heading">Opinie</h2>
+            <div class="wrapper">
+
+
+                <div class="reviews__boxes">
+
+                    <div class="reviews__box">
+                        <div class="reviews__box-img">
+                            <img src="./img/rev1.jpg" alt="Anna Nowak">
+                        </div>
+                        <div class="reviews__box-info">
+                            <div class="reviews__box-quote"> <i class="fas fa-quote-right"></i></div>
+                            <p class="reviews__box-text">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias eum ducimus numquam
+                                officia quibusdam libero quas. Fugit facere ducimus nihil!
+                            </p>
+                            <strong>Anna Nowak</strong>
+                        </div>
+                    </div>
+
+
+                    <div class="reviews__box">
+                        <div class="reviews__box-img">
+                            <img src="./img/rev2.jpg" alt="Monika Piechura">
+                        </div>
+                        <div class="reviews__box-info">
+                            <div class="reviews__box-quote"> <i class="fas fa-quote-right"></i></div>
+                            <p class="reviews__box-text">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias eum ducimus numquam
+                                officia quibusdam libero quas. Fugit facere ducimus nihil!
+                            </p>
+                            <strong>Monika Piechura</strong>
+                        </div>
+                    </div>
+
+                    <div class="reviews__box">
+                        <div class="reviews__box-img">
+                            <img src="./img/rev3.jpg" alt="Angelika Piastek">
+                        </div>
+                        <div class="reviews__box-info">
+                            <div class="reviews__box-quote"> <i class="fas fa-quote-right"></i></div>
+                            <p class="reviews__box-text">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias eum ducimus numquam
+                                officia quibusdam libero quas. Fugit facere ducimus nihil!
+                            </p>
+                            <strong>Angelika Piastek</strong>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </section>
+
     </main>
 
 
@@ -211,7 +320,10 @@
 
 
 
-
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/slick.js"></script>
     <script src="js/main.js"></script>
 </body>
 

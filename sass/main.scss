@@ -247,14 +247,15 @@ body {
 .towers {
 	&__cards {
 		display: flex;
-		justify-content: center;
+		flex-direction: column;
+		align-items: center;
 	}
 
 	&__card {
 		position: relative;
-		height: 400px;
-		width: 500px;
-		margin: 0 2em;
+		height: 350px;
+		width: 100%;
+		margin: 1em 2em;
 		text-align: center;
 
 		perspective: 1000px;
@@ -303,7 +304,6 @@ body {
 			border-radius: 15px;
 			transition: transform 1s;
 			background-image: $navi-gradient-solid;
-
 			opacity: 0;
 
 			&-title {
@@ -361,6 +361,108 @@ body {
 	}
 }
 
+.offers {
+	position: relative;
+	overflow: hidden;
+
+	@include heroImages("../img/opera-small.jpg");
+
+	&__option {
+		margin: 1em 0;
+		box-shadow: 5px 5px 10px #2e2e2ee0;
+		overflow: hidden;
+		// background-color: $secondary-color;
+		backdrop-filter: invert(30%);
+
+		&-img {
+			width: 100%;
+			transition: transform 0.3s;
+
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+
+		&-info {
+			padding: 2em;
+			color: $secondary-color;
+		}
+
+		&-heading {
+			margin-bottom: 0.5em;
+		}
+		&-text {
+			margin-bottom: 0.5em;
+			font-size: 1.73rem;
+		}
+
+		&-btn {
+			width: 100%;
+			margin-top: 1em;
+			padding: 0.8em;
+			color: $secondary-color;
+			background-color: $main-color;
+			border: none;
+			border-radius: 15px;
+			cursor: pointer;
+
+			&::before {
+				background-color: $tertiary-color;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.reviews.section-padding {
+		padding: 6em 0;
+	}
+}
+
+.reviews {
+	&__box {
+		position: relative;
+		margin: 2em;
+		padding: 2em;
+		border-radius: 8px;
+		box-shadow: 3px 3px 10px black;
+		transition: transform 0.3s;
+
+		&:hover {
+			transform: scale(0.9);
+		}
+	}
+
+	&__box-img {
+		position: absolute;
+		top: 4%;
+		left: 75%;
+		transform: translate(-50%, -50%);
+
+		img {
+			width: 80px;
+			height: 80px;
+			object-fit: cover;
+			border-radius: 50%;
+		}
+	}
+
+	&__box-quote {
+		margin-bottom: 1em;
+		font-size: 3rem;
+		color: $main-color;
+	}
+
+	&__box-text {
+		margin-bottom: 1em;
+		color: $secondary-color;
+	}
+
+	strong {
+		color: $secondary-color;
+	}
+}
+
 @media (min-width: 576px) {
 	.dreams {
 		&__box {
@@ -388,6 +490,35 @@ body {
 		&__img {
 			margin-bottom: 0;
 			max-height: 300px;
+		}
+	}
+
+	.offers {
+		&__option {
+			display: flex;
+			margin: 2em 0;
+			width: 100%;
+
+			&-img {
+				width: 50%;
+				height: auto;
+				object-fit: cover;
+
+				&--right {
+					order: 1;
+				}
+			}
+
+			&-info {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+			}
+
+			&-heading {
+				margin-bottom: 0.5em;
+				font-size: 3.6rem;
+			}
 		}
 	}
 }
@@ -468,6 +599,38 @@ body {
 
 		&__title {
 			font-size: 3.6rem;
+		}
+	}
+
+	.towers {
+		&__cards {
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+		}
+
+		&__card {
+			width: 40%;
+		}
+	}
+
+	.offers {
+		background-image: $navi-gradient-solid, ("../img/opera-big.jpg");
+
+		&__option {
+			&-img {
+				height: 300px;
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.towers {
+		&__cards {
+			flex-direction: row;
+			flex-wrap: nowrap;
 		}
 	}
 }
