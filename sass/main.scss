@@ -21,6 +21,12 @@ body {
 	background-color: $main-background-color;
 }
 
+.black-bars-color,
+.black-bars-color::after,
+.black-bars-color::before {
+	background-color: $secondary-color;
+}
+
 //NAV
 
 .burger-btn {
@@ -361,6 +367,8 @@ body {
 	}
 }
 
+//OFFERS
+
 .offers {
 	position: relative;
 	overflow: hidden;
@@ -413,6 +421,52 @@ body {
 	}
 }
 
+.contact {
+	position: relative;
+	background-image: $navi-gradient-solid;
+	overflow: hidden;
+
+	&__form,
+	&__form-top {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__form-label {
+		margin-bottom: 0.5em;
+		text-transform: uppercase;
+		color: $main-color;
+		font-size: 2rem;
+	}
+
+	&__form-input {
+		@include contactForm;
+	}
+	&__form-textarea {
+		@include contactForm;
+		max-width: 100%;
+	}
+
+	.white-block-left {
+		background-color: $dark;
+	}
+
+	&__form-btn {
+		width: 100%;
+		max-width: 300px;
+		padding: 1em;
+		background-color: $main-color;
+		border: none;
+		border-radius: 8px;
+		cursor: pointer;
+		color: $secondary-color;
+
+		&::before {
+			background-color: $tertiary-color;
+		}
+	}
+}
+
 @media (max-width: 767px) {
 	.reviews.section-padding {
 		padding: 6em 0;
@@ -460,6 +514,56 @@ body {
 
 	strong {
 		color: $secondary-color;
+	}
+}
+
+//FOOTER
+
+.footer {
+	background-color: $dark;
+	color: white;
+	.wrapper {
+		padding: 6em 2em 2em;
+	}
+
+	&__box {
+		font-size: 1.4rem;
+	}
+
+	&__box-desktop {
+		display: none;
+	}
+
+	&__box-title {
+		margin-bottom: 1em;
+		font-size: 3rem;
+		text-transform: uppercase;
+		color: $main-color;
+	}
+
+	&__box-social {
+		margin: 2em 0 1em;
+	}
+
+	&__box-link {
+		padding: 0 0.3em;
+		font-size: 3.6rem;
+		color: white;
+		text-decoration: none;
+		transition: color 0.3s;
+
+		&:nth-child(1) {
+			padding-left: 0;
+		}
+
+		&:hover {
+			color: $main-color;
+		}
+	}
+
+	&__bottom-text {
+		padding: 2em;
+		text-align: center;
 	}
 }
 
@@ -560,6 +664,50 @@ body {
 
 		&__text {
 			font-size: 4rem;
+		}
+	}
+
+	.contact {
+		&__form-btn {
+			align-self: flex-end;
+		}
+	}
+
+	.footer {
+		&__boxes {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&__box {
+			width: 25%;
+
+			&:first-child {
+				width: 50%;
+			}
+		}
+
+		&__box-desktop {
+			display: block;
+			margin: 0 2em;
+			text-align: right;
+		}
+
+		&__box-list {
+			list-style-type: none;
+
+			&-item {
+				margin-bottom: 0.8em;
+			}
+
+			a {
+				color: white;
+				text-decoration: none;
+
+				&:hover {
+					color: $main-color;
+				}
+			}
 		}
 	}
 }

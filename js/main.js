@@ -2,6 +2,10 @@ const btnNavi = document.getElementById("navBtn");
 const navMenu = document.getElementById("navMenu");
 const navItems = document.querySelectorAll("a.nav__item");
 
+const navBtnBars = document.querySelector(".burger-btn__bars");
+const allSections = document.querySelectorAll(".section");
+const footerYear = document.querySelector(".footer__year");
+
 console.log(navItems);
 
 btnNavi.addEventListener("click", () => {
@@ -19,4 +23,27 @@ btnNavi.addEventListener("click", () => {
 	});
 });
 
-console.log(btnNavi);
+const handleObserver = () => {
+	const currentSection = window.scrollY;
+
+	allSections.forEach(section => {
+		if (
+			section.classList.contains("white-section") &&
+			section.offsetTop <= currentSection + 60
+		) {
+			navBtnBars.classList.add("black-bars-color");
+		}
+	});
+
+	console.log(currentSection);
+};
+
+handleObserver();
+
+const handleCurrentYear = () => {
+	const year = new Date().getFullYear();
+
+	footerYear.innerText = year;
+};
+
+handleCurrentYear();

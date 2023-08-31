@@ -95,6 +95,12 @@ body {
   background-color: white;
 }
 
+.black-bars-color,
+.black-bars-color::after,
+.black-bars-color::before {
+  background-color: #171274;
+}
+
 .burger-btn {
   position: fixed;
   top: 20px;
@@ -434,6 +440,53 @@ body {
   background-color: rgb(59, 183, 255);
 }
 
+.contact {
+  position: relative;
+  background-image: linear-gradient(-180deg, #15304e, #333255);
+  overflow: hidden;
+}
+.contact__form, .contact__form-top {
+  display: flex;
+  flex-direction: column;
+}
+.contact__form-label {
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+  color: rgb(48, 161, 226);
+  font-size: 2rem;
+}
+.contact__form-input {
+  margin-bottom: 2em;
+  padding: 0.6em 1.2em;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.6rem;
+}
+.contact__form-textarea {
+  margin-bottom: 2em;
+  padding: 0.6em 1.2em;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  max-width: 100%;
+}
+.contact .white-block-left {
+  background-color: #464646;
+}
+.contact__form-btn {
+  width: 100%;
+  max-width: 300px;
+  padding: 1em;
+  background-color: rgb(48, 161, 226);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #171274;
+}
+.contact__form-btn::before {
+  background-color: rgb(59, 183, 255);
+}
+
 @media (max-width: 767px) {
   .reviews.section-padding {
     padding: 6em 0;
@@ -474,6 +527,46 @@ body {
 }
 .reviews strong {
   color: #171274;
+}
+
+.footer {
+  background-color: #464646;
+  color: white;
+}
+.footer .wrapper {
+  padding: 6em 2em 2em;
+}
+.footer__box {
+  font-size: 1.4rem;
+}
+.footer__box-desktop {
+  display: none;
+}
+.footer__box-title {
+  margin-bottom: 1em;
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: rgb(48, 161, 226);
+}
+.footer__box-social {
+  margin: 2em 0 1em;
+}
+.footer__box-link {
+  padding: 0 0.3em;
+  font-size: 3.6rem;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer__box-link:nth-child(1) {
+  padding-left: 0;
+}
+.footer__box-link:hover {
+  color: rgb(48, 161, 226);
+}
+.footer__bottom-text {
+  padding: 2em;
+  text-align: center;
 }
 
 @media (min-width: 576px) {
@@ -552,6 +645,37 @@ body {
   }
   .hero-img__text {
     font-size: 4rem;
+  }
+  .contact__form-btn {
+    align-self: flex-end;
+  }
+  .footer__boxes {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer__box {
+    width: 25%;
+  }
+  .footer__box:first-child {
+    width: 50%;
+  }
+  .footer__box-desktop {
+    display: block;
+    margin: 0 2em;
+    text-align: right;
+  }
+  .footer__box-list {
+    list-style-type: none;
+  }
+  .footer__box-list-item {
+    margin-bottom: 0.8em;
+  }
+  .footer__box-list a {
+    color: white;
+    text-decoration: none;
+  }
+  .footer__box-list a:hover {
+    color: rgb(48, 161, 226);
   }
 }
 @media (min-width: 992px) {
